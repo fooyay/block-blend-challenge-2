@@ -32,6 +32,7 @@ def generate_account():
     private, public = wallet.derive_account("eth")
 
     # Convert private key into an Ethereum account
+    # Note: web3 API changed since this course was created, we now need '.from_key()' here
     account = Account.from_key(private)
 
     return account
